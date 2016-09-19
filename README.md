@@ -31,3 +31,8 @@ Change the "YourStreamKeyHere" to the steam key provided to you on https://www.y
 <pre>
 nano videoCommand
 </pre>
+
+**Run the Video Command**
+<pre>
+./videoCommand
+</pre>
