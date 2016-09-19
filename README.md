@@ -24,15 +24,15 @@ sudo raspi-config
 tar -xvf arm.tar.gz
 </pre>
 
-**Add A Stream Key to videoCommand**
+**Add A Stream Key to "start-stream"**
 
 
 Change the "YourStreamKeyHere" to the steam key provided to you on https://www.youtube.com/live_dashboard
 <pre>
-nano videoCommand
+nano start-stream
 </pre>
 
 **Start A Stream**
 <pre>
-./videoCommand
+./start-stream
 </pre>
