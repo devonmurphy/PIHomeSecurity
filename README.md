@@ -24,7 +24,7 @@ sudo raspi-config
 tar -xvf arm.tar.gz
 </pre>
 
-**Add stream ID to videoCommand**
+**Add A Stream Key to videoCommand**
 
 
 Change the "YourStreamKeyHere" to the steam key provided to you on https://www.youtube.com/live_dashboard
@@ -32,7 +32,7 @@ Change the "YourStreamKeyHere" to the steam key provided to you on https://www.y
 nano videoCommand
 </pre>
 
-**Start The Stream**
+**Start A Stream**
 <pre>
 ./videoCommand
 </pre>
