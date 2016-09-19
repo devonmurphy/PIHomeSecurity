@@ -32,7 +32,7 @@ Change the "YourStreamKeyHere" to the steam key provided to you on https://www.y
 nano videoCommand
 </pre>
 
-**Run the Video Command**
+**Start The Stream**
 <pre>
 ./videoCommand
 </pre>
