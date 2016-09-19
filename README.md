@@ -18,3 +18,13 @@ git clone https://github.com/devonmurphy/PIHomeSecurity
 <pre>
 sudo raspi-config
 </pre>
+
+**Uncompress ffmpeg**
+<pre>
+tar -xvf arm.tar.gz
+</pre>
+
+**Add stream ID to videoCommand**
+<pre>
+nano videoCommand
+</pre>
