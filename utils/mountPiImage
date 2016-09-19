@@ -1,2 +1,2 @@
 diskutil unmountDisk /dev/disk1
-sudo dd bs=1m if=2016-05-27-raspbian-jessie-lite.img of=/dev/rdisk1
+sudo dd bs=1m if=2016-05-27-raspbian-jessie.img of=/dev/rdisk1
