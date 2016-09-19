@@ -25,6 +25,7 @@ tar -xvf arm.tar.gz
 </pre>
 
 **Add stream ID to videoCommand**
+Change the "YourStreamKeyHere" to the steam key provided to you on https://www.youtube.com/live_dashboard
 <pre>
 nano videoCommand
 </pre>
