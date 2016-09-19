@@ -1,5 +1,5 @@
 #Intro To Raspberry Pi: DIY Home Security System
-
+This repository demonstrates how to stream live video to Youtube from a Raspberry Pi.
 
 #Installation
 
