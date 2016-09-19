@@ -1,1 +1,2 @@
+#!/usr/bin/env bash
 tar -xvf arm.tar.gz
