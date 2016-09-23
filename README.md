@@ -33,6 +33,7 @@ tar -xvf arm.tar.gz
 
 **Add A Stream Key To "start-stream"**
 Change the "YourStreamKeyHere" to the steam key provided to you on https://www.youtube.com/live_dashboard
+When you are done editing the file, hit cntrl+x to quit and press Y to save.
 <pre>
 nano start-stream
 </pre>
