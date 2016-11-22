@@ -3,8 +3,8 @@
 <body> 
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<button id="start" name ='start'>Start Stream</button>
-<button id="stop" name ='stop' >Stop Stream</button>
+<button id="start">Start Stream</button>
+<button id="stop">Stop Stream</button>
 <p></p>
 <script type="text/javascript">
      function sleep(delay) {
@@ -16,8 +16,8 @@
             $.ajax({
                 type: 'POST',
                 url: '/',
+				data: 'start',
                 success: function(data) {
-		    location.reload(); 
                 }
             });
    });
@@ -25,8 +25,8 @@
             $.ajax({
                 type: 'POST',
                 url: '/',
+				data: 'stop',
                 success: function(data) {
-		    location.reload(); 
                 }
             });
    });
