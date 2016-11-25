@@ -1,3 +1,10 @@
 #!/usr/bin/env bash
 
-sudo echo '@reboot /home/pi/PIHomeSecurity/start-server.py' > /var/spool/cron/crontabs/pi
+if [ -d "arm" ]; then
+	echo "Don't need to extract arm"
+else
+	tar -xvf arm.tar.gz
+fi
+
+#sudo echo '@reboot /home/pi/PIHomeSecurity/start-server.py' > /var/spool/cron/crontabs/pi
+#sudo cp ./arm/bin/ffmpeg /usr/bin/

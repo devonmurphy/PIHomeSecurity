@@ -9,13 +9,15 @@ import smtplib
 ############################################
 EMAIL = "YOUR_GMAIL_ACCOUNT"
 PASS = "GMAIL_ACCOUNT_PASSWORD"
+WEBSITE_USERNAME = "username"
+WEBSITE_PASSWORD = "password"
 ############################################
 
 directory = os.path.dirname(os.path.realpath(__file__))
 print directory
 
 time.sleep(5)
-os.system(directory + '/ngrok http 5000 -auth="username:password" -log=stdout > /dev/null &')
+os.system(directory + '/ngrok http 5000'+' -auth="'+WEBSITE_USERNAME+':'+WEBSITE_PASSWORD+'" -log=stdout > /dev/null &')
 os.system('python ' + directory + '/website.py &')
 time.sleep(5)
 r = requests.get('http://localhost:4040/api/tunnels/command_line')
