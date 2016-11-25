@@ -14,6 +14,7 @@ def index():
 				os.system(directory+'/start-stream')
 			if item == 'stop':
 				print 'stop stream'
+				os.system(directory+'/stop-stream')
 		return render_template('index.php')
     elif request.method == 'GET':
 		return render_template('index.php')
