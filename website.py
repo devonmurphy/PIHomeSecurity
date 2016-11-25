@@ -10,8 +10,9 @@ def index():
     if request.method == 'POST':
 		for item in request.form:
 			if item == 'start':
-				print 'start stream'
-				os.system(directory+'/start-stream')
+				#print 'start stream'
+				os.system(directory+'/start-stream &')
+				print("Starting Stream...")
 			if item == 'stop':
 				print 'stop stream'
 				os.system(directory+'/stop-stream')
