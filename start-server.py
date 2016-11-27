@@ -14,9 +14,8 @@ WEBSITE_PASSWORD = "password"
 ############################################
 
 directory = os.path.dirname(os.path.realpath(__file__))
-print directory
 
-time.sleep(10)
+time.sleep(5)
 os.system(directory + '/ngrok http 80'+' -auth="'+WEBSITE_USERNAME+':'+WEBSITE_PASSWORD+'" -log=stdout > /dev/null &')
 #os.system('python ' + directory + '/website.py &')
 time.sleep(5)
