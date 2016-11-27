@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
 
-if [ -d "arm" ]; then
-	echo "Don't need to extract arm"
-else
-	tar -xvf arm.tar.gz
-fi
+tar -xvf arm.tar.gz
+sudo cp ./arm/bin/ffmpeg /usr/bin/
+cp ngrok /usr/bin/
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python get-pip.py
+sudo pip install requests
+sudo pip install flask
+sudo pip install email
 
-#sudo echo '@reboot /home/pi/PIHomeSecurity/start-server.py' > /var/spool/cron/crontabs/pi
-#sudo cp ./arm/bin/ffmpeg /usr/bin/
+(crontab -l ; echo "@reboot /home/pi/PIHomeSecurity/start-server.py") | crontab -
+(crontab -l ; echo "@reboot sudo modprobe bcm2835-v4l2") | crontab -
