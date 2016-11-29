@@ -1,0 +1,4 @@
+pkill python
+pkill ngrok
+pkill raspivid
+pkill vlc
