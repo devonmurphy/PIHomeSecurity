@@ -17,7 +17,7 @@ directory = os.path.dirname(os.path.realpath(__file__))
 print directory
 
 time.sleep(10)
-os.system(directory + '/ngrok http 8080'+' -auth="'+WEBSITE_USERNAME+':'+WEBSITE_PASSWORD+'" -log=stdout > /dev/null &')
+os.system(directory + '/ngrok http 8081'+' -auth="'+WEBSITE_USERNAME+':'+WEBSITE_PASSWORD+'" -log=stdout > /dev/null &')
 time.sleep(2)
 os.system('sudo -u pi '+directory + '/vlc-start-stream &')
 r = requests.get('http://localhost:4040/api/tunnels/command_line')

@@ -1,10 +1,21 @@
 #!/usr/bin/env bash
 
-if [ -d "arm" ]; then
-	echo "Don't need to extract arm"
-else
-	tar -xvf arm.tar.gz
-fi
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get dist-upgrade
+sudo apt-get install git
 
-#sudo echo '@reboot /home/pi/PIHomeSecurity/start-server.py' > /var/spool/cron/crontabs/pi
-#sudo cp ./arm/bin/ffmpeg /usr/bin/
+sudo apt-get install motion
+#wget https://bootstrap.pypa.io/get-pip.py
+#sudo python get-pip.py
+#pip install requests
+#pip install flask
+
+sudo cp configs/motion.conf /etc/motion/
+sudo cp configs/motion /etc/default/
+
+sudo crontab -l > mycron
+sudo echo "@reboot /home/pi/PIHomeSecurity/start-server.py" >> mycron
+sudo echo "@reboot sudo modprobe bcm2835-v4l2" >> mycron
+crontab mycron
+rm mycron
