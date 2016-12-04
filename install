@@ -1,10 +1,19 @@
 #!/usr/bin/env bash
 
-if [ -d "arm" ]; then
-	echo "Don't need to extract arm"
-else
-	tar -xvf arm.tar.gz
-fi
+#Install RPI Cam From https://github.com/silvanmelchior/RPi_Cam_Web_Interface
+#git clone https://github.com/silvanmelchior/RPi_Cam_Web_Interface.git
+#cd RPi_Cam_Web_Interface
+#chmod u+x *.sh
+#./install.sh
 
-#sudo echo '@reboot /home/pi/PIHomeSecurity/start-server.py' > /var/spool/cron/crontabs/pi
-#sudo cp ./arm/bin/ffmpeg /usr/bin/
+#Install Python Libraries
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python get-pip.py
+rm get-pip.py
+sudo pip install requests
+
+sudo crontab -l > mycron
+echo "@reboot /home/pi/PIHomeSecurity/start-server.py" >> mycron
+crontab mycron
+rm mycron
+

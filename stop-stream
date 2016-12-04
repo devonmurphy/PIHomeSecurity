@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-sudo pkill raspivid
-sudo pkill ffmpeg
