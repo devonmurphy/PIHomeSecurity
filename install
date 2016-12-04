@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+
 #Install RPI Cam From https://github.com/silvanmelchior/RPi_Cam_Web_Interface
 git clone https://github.com/silvanmelchior/RPi_Cam_Web_Interface.git
 cd RPi_Cam_Web_Interface
@@ -14,7 +15,7 @@ sudo pip install requests
 
 #Start-server at boot
 sudo crontab -l > mycron
-echo "@reboot /home/pi/PIHomeSecurity/start-server.py" >> mycron
+echo "@reboot $PWD/start-server.py" >> mycron
 crontab mycron
 rm mycron
 
